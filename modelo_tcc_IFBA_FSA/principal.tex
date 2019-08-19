@@ -1,0 +1,195 @@
+%% TODOS OS CRÉDITOS A:
+%%
+%% RiSE's latex template for thesis and dissertations
+%% http://risetemplate.sourceforge.net
+%%
+%% (c) 2012 Yguaratã Cerqueira Cavalcanti (yguarata@gmail.com)
+%%          Vinicius Cardoso Garcia (vcg@cin.ufpe.br)
+%%
+%% This document was initially based on UFPEThesis template, from Paulo Gustavo
+%% S. Fonseca.
+%%
+
+%%% PEQUENAS ADAPTAÇÕES PARA SER USADO NO IFBA:
+%%% José Dihego da Silva Oliveira
+%%%  jose.dihego@ifba.edu.br
+
+%%
+%% INSTRUÇÕES
+%%
+%%         * Idiom
+%%           pt   - Português (default)
+%%           en   - Inglês
+%%
+%%         * Tipos
+%%           bsc  - TCC
+%%           msc  - MESTRADO
+%%           qual - QUALIFICAÇÃO
+%%           prop - PROPOSTA
+%%           phd  - TESE FINAL
+%%
+%%         * PAGINAÇÃO
+%%           oneside - uma
+%%           twoside - duas
+%%
+%% REFERÊNCIAS
+%%          \figref  -- para figura
+%%          \tabref  -- para tabela
+%%          \eqnref  -- para equação
+%%          \chapref -- para capítulo
+%%          \secref  -- para seção
+%%          \appref  -- para apêndice
+%%          \axiref  -- para axioma
+%%          \conjref -- para conjectura
+%%          \defref  -- para definição
+%%          \lemref  -- para lema
+%%          \theoref -- para teorema
+%%          \corref  -- para corolário
+%%          \pgref   -- para página
+%%
+%%          \citet (from natbib) -- Citação como 
+%% parte da narativa
+%%          \citep (from natbib) -- Citação
+%% entre parêntesis
+
+\documentclass[pt,twoside,onehalfspacing,bsc]{risethesis}
+
+\usepackage{colortbl}
+\usepackage{color}
+\usepackage[table]{xcolor}
+\usepackage{microtype}
+\usepackage{bibentry}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{booktabs}
+\usepackage{pdfpages}
+\usepackage{caption}
+\usepackage{lipsum}
+\usepackage{sectsty}
+
+\captionsetup[table]{position=top,justification=centering,width=.85\textwidth,labelfont=bf,font=footnotesize}
+\captionsetup[lstlisting]{position=top,justification=centering,width=.85\textwidth,labelfont=bf,font=footnotesize}
+\captionsetup[figure]{position=bottom,justification=centering,width=.85\textwidth,labelfont=bf,font=footnotesize}
+
+%% Capítlos, seções e sub-seções devem ter o  mesmo tamanho de fonte 12 
+\sectionfont{\fontsize{12}{15}\selectfont}
+\subsectionfont{\fontsize{12}{15}\selectfont}
+\subsubsectionfont{\fontsize{12}{15}\selectfont}
+\usepackage{amsmath}
+\newcommand{\dd}[1]{\mathrm{d}#1}
+
+%% Atualize com seus dados
+\usepackage[linkcolor=black,
+            citecolor=black,
+            urlcolor=black,
+            colorlinks,
+            pdfpagelabels,
+            pdftitle={Título do meu trabalho},
+            pdfauthor={Meu nome},
+            breaklinks=true]{hyperref}
+
+\address{FEIRA DE SANTANA}
+
+\universitypt{Instituto Federal de Educação, Ciência e Tecnologia da Bahia }
+\universityen{Federal Institute of Bahia
+}
+
+\departmentpt{Bacharelado em Sistemas de Informação}
+\departmenten{Bachelor in Computer Information Systems}
+
+\programpt{Graduação em Sistemas de Informação}
+\programen{Bachelor in Computer Information Systems}
+
+\majorfieldpt{Sistemas de Informação}
+\majorfielden{Information Systems}
+
+\title{Seu título compacto, chamativo e esclarecedor}
+
+\date{2019}
+
+\author{Seu nome}
+\adviser{Nome orientador}
+\coadviser{Nome coorientador}
+
+\def\x{\checkmark}
+
+\begin{document}
+
+\frontmatter
+
+\frontpage
+
+\presentationpage
+
+\begin{fichacatalografica}
+	\FakeFichaCatalografica
+\end{fichacatalografica}
+
+\banca
+
+\begin{dedicatory}
+Dedico este trabalho...
+\end{dedicatory}
+
+\acknowledgements
+\input{agradecimentos}
+
+\begin{epigraph}[]{Patativa do Assaré}
+Sertão, argúem te cantô,
+Eu sempre tenho cantado
+E ainda cantando tô,
+Pruquê, meu torrão amado,
+Munto te prezo, te quero
+E vejo qui os teus mistéro
+Ninguém sabe decifrá.
+A tua beleza é tanta,
+Qui o poeta canta, canta,
+E inda fica o qui cantá.
+\end{epigraph}
+
+\resumo
+% Escreva seu resumo em português no arquivo resumo.tex
+{\parindent0pt
+	\input{resumo}
+}
+
+\abstract
+% Escreva seu resumo em inglês no arquivo abstract.tex
+{\parindent0pt
+	\input{abstract}
+}
+
+% List of figures
+\listoffigures
+
+% List of tables
+\listoftables
+
+% List of acronyms
+% Acronyms manual: http://linorg.usp.br/CTAN/macros/latex/contrib/acronym/acronym.pdf
+\listofacronyms
+\input{acronimos}
+
+% Summary (tables of contents)
+\tableofcontents
+
+\mainmatter
+
+\include{capitulos/introducao}
+\include{capitulos/fundamentacao}
+\include{capitulos/desenvimento}
+\include{capitulos/conclusao}
+
+% References
+
+\begin{references}
+  \bibliography{referencias}
+\end{references}
+
+% Appendix
+
+\theappendix
+\include{apendice/apendices}
+
+\end{document}
