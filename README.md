@@ -17,11 +17,6 @@
 
 
 
- This document was initially based on UFPEThesis template, from Paulo Gustavo
-
- S. Fonseca.
-
-
 
 
 PEQUENAS ADAPTAÇÕES PARA SER USADO NO IFBA:
