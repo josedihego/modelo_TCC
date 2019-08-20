@@ -1,21 +1,11 @@
 # modelos_ta_ifba_fsa
 
 
- TODOS OS CRÉDITOS A: https://github.com/yguarata/risethesis
+ CRÉDITOS A: https://github.com/yguarata/risethesis
 
+2012 Yguaratã Cerqueira Cavalcanti (yguarata@gmail.com)
 
-
- RiSE's latex template for thesis and dissertations
-
- http://risetemplate.sourceforge.net
-
-
-
- (c) 2012 Yguaratã Cerqueira Cavalcanti (yguarata@gmail.com)
-
-          Vinicius Cardoso Garcia (vcg@cin.ufpe.br)
-
-
+Vinicius Cardoso Garcia (vcg@cin.ufpe.br)
 
 
 
@@ -26,15 +16,13 @@ José Dihego da Silva Oliveira
 jose.dihego@ifba.edu.br
 
 
-
-
  INSTRUÇÕES
 
 
 
-         * Idiom
+         * Idiomas
 
-           pt   - Português (default)
+           pt   - Português (padrão)
 
            en   - Inglês
 
@@ -42,7 +30,7 @@ jose.dihego@ifba.edu.br
 
          * Tipos
 
-           bsc  - TCC
+           bsc  - TRABALHO DE CONCLUSO DE CURSO
 
            msc  - MESTRADO
 
@@ -56,9 +44,9 @@ jose.dihego@ifba.edu.br
 
          * PAGINAÇÃO
 
-           oneside - uma
+           oneside - uma página por folha
 
-           twoside - duas
+           twoside - duas páginas por folha
 
 
 
